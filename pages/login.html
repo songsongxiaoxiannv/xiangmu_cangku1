@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>登录</title>
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
+  <link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo inner">
+      <a id="logo" href="../index.html"></a>
+      <span>优品汇</span>
+      <span>汇聚优质商品</span>
+      <div class="dcwj">
+        <a href="../index.html" title="是否返回首页">进入网站首页</a>
+      </div>
+    </div>
+  </div>
+  <!-- 登录 -->
+  <div class="content">
+    <div class="inner">
+      <form>
+      <div class="login">
+        <h6 class="useName">用户登录</h6>
+          <p>
+            <input type="text" name="username" id="phone" placeholder="用户名称/手机号码" maxlength="20">
+            <span class="qc"></span>
+          </p>
+          <p>
+            <input type="password" name="userpwd" id="password" placeholder="输入登录密码" maxlength="20">
+            <i>请输入用户名称</i>
+            <span class="qc"></span>
+            <span class="error" id="error">用户名或密码错误</span>
+
+          </p>
+          <p id="login">
+            <button type="submit" class="btn btn-default">登录</button>
+          </p>
+          <div class="prompt">
+            <a class="fcl on" href="Javascript:;">忘记密码?</a>
+            <a class="fcl" href="res.html">新用户注册</a>
+          </div>
+          <p>其他方式登录</p>
+          <div class="type">
+            <ul>
+              <li>微信</li>
+              <li>微博</li>
+              <li>QQ</li>
+            </ul>
+          </div>
+      </div>
+      </form>
+    </div>
+  </div>
+  <!-- 底部 -->
+  <div class="db">
+    <div class="inner">
+      <div class="hd">
+        <ul>
+          <li><a href="">关于我们</a>&nbsp;&nbsp;|</li>
+          <li><a href="">帮助中心</a>&nbsp;&nbsp;|</li>
+          <li><a href="">售后服务</a>&nbsp;&nbsp;|</li>
+          <li><a href="">配送与验收</a>&nbsp;&nbsp;|</li>
+          <li><a href="">商务合作</a>&nbsp;&nbsp;|</li>
+          <li><a href="">企业采购</a>&nbsp;&nbsp;|</li>
+          <li><a href="">开放平台</a>&nbsp;&nbsp;|</li>
+          <li><a href="">搜索推荐</a>&nbsp;&nbsp;|</li>
+          <li><a href="">友情链接</a></li>
+        </ul>
+      </div>
+      <div class="bd">
+        CopyRight @ 优品汇 2019 - 2019
+      </div>
+    </div>
+  </div>
+  <script src="../js/cookie.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script>
+    $('form').submit(function (e) {
+      //  阻止默认事件的提交
+      e.preventDefault();
+      //  获取输入数据
+      let username = $('[name="username"]').val();
+      let userpwd = $('[name="userpwd"]').val();
+      // 此处验证判断不写
+      // 发送Ajax请求
+      $.ajax({
+        url: '../server/goods_login.php',
+        type: 'post',
+        data: { userName: username, userPwd: userpwd },
+        dataType: 'json',
+        success: function (res) {
+          if (res == '1') {
+            window.alert('您登陆成功，您哪儿来的,还是回哪儿去吧');
+            //  获取url地址中的参数  
+            let str = decodeURIComponent(window.location.search);
+            str = str.substr(1);
+            // 跳转回去原来的地址
+            window.location.href = str;
+            // 登录成功设定cookie  此时的cookie就是全局的cookie，任何一个文件都可以获取到
+            setCookies('login', 1, 7 * 24 * 60 * 60);
+          } else if (res == '0') {
+            window.alert('您登陆失败，请继续登录');
+          }
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>

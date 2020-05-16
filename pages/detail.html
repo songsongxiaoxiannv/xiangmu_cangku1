@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- 正确显示网络来源图片 -->
+  <meta name="referrer" content="never">
+  <title>Document</title>
+  <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/detail.css">
+</head>
+<body>
+<h1>我是一个商品详情页面</h1>
+
+<div class="container">
+  <div class="panel panel-default"></div>
+</div>
+<script src="../js/cookie.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script>
+    console.log(window.location.href);
+
+    // 定义一个变量,来存储 ajax的请求结果
+    // 方便在其他函数数据中使用
+    let result = [];
+
+    // 1,先获取地址栏中的数据信息
+    let str = decodeURIComponent(window.location.search.substr(1));
+    // 转化成数组
+    const arr = str.split('=');
+
+    // 2,发送ajax请求,获取结果,生成页面内容
+    // 与列表页需要分页显示,需要反复查询不同
+    // 详情页只需要查询一次
+
+    $.ajax({
+      url:'../server/goods_detail.php',
+      type:'post',
+      data:{goods_id : arr[1]},
+      dataType : 'json',
+      success : function(res){
+        console.log(res);
+
+        //用Ajax请求获取的结果 对全局作用域变量 result 进行赋值,便于在函数外调用
+        // 拿到了数据
+        result = res;
+
+        // 根据数据,生成页面
+        let str = '';
+        str = `<div class="panel-heading">
+                <h3 class="panel-title">商品详细信息</h3>
+              </div>
+              <div class="panel-body">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="${res.goods_small_logo}" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">${res.goods_name}</h4>
+                    <p>
+                      <i class="glyphicon glyphicon-yen"></i>
+                      <span>${res.goods_price}</span>
+                    </p>
+                    <div class="btn-group" role="group" aria-label="...">
+                      <button type="button" class="btn btn-default">XL</button>
+                      <button type="button" class="btn btn-default">L</button>
+                      <button type="button" class="btn btn-default">M</button>
+                      <button type="button" class="btn btn-default">S</button>
+                      <button type="button" class="btn btn-default">XS</button>
+                    </div>
+                    <p>
+                      <a href="javascript:;" class="btn btn-warning btn-lg" role="button">立即购买</a>
+                      <a href="#" name="inCar" class="btn btn-danger btn-lg" role="button">加入购物车</a>
+                    </p>
+                  </div>
+                </div>
+                <ul class="nav nav-tabs">
+                  <li role="presentation" class="active"><a href="#">商品详细信息</a></li>
+                  <li role="presentation"><a href="#">商品参数信息</a></li>
+                  <li role="presentation"><a href="#">相关商品</a></li>
+                </ul>
+                <div>
+                    ${res.goods_introduce}
+                </div>
+              </div>`;
+            
+            // 将字符串内容,吸入到标签中
+            $('.panel').html(str);
+      }
+    })
+    // 就是点击详情页的按钮
+    // 需要给 加入购物车 按钮添加点击事件效果
+    // 加入购物车 按钮,是动态生成的内容
+    // 如果直接写,ajax是异步请求,无法给标签添加事件
+    // 如果直接 获取 标签,会是空数组 因为此时还没有生成标签
+    // 必须写成事件委托的形式
+    // 点击的时候，已经有内容了 ，此时可以操作了
+
+    $('.panel').on('click' , '[name="inCar"]' , function(){
+
+      
+        // 1,判断是否登录了
+        // 如果登录,可以正常加入购物车
+        // 如果没有登录,不加入购物车,要去登录
+        // 判断是否是 cookie login 这个属性
+        const cookieObj = getCookieObj(document.cookie);
+
+        if( cookieObj.login === undefined ){
+            // 没有登录,弹出确认框
+            let bool = window.confirm('您还没有登录,点击确定,跳转登录页面');
+            if(bool === true){
+              // 传参当前页面的地址信息,告诉登录页面,我是从哪儿来的 跳转登录页面时，都要传参
+              // window.location.href就是当前地址栏中的url信息
+              window.location.href = `../pages/login.html?${window.location.href}`;
+            }else{
+              // 如果点击取消,后面的加入购物车的程序,也不执行了
+              return false;
+            }
+        }else if(cookieObj.login === '1'){
+            // 跳转购物车页面
+            window.location.href = './cart.html';
+
+            // 将这条数据,添加在购物车页面中
+            // 如果购车中没有这条数据,要新增这条数据
+            // 如果购物车中有这条数据,要在购买数量上,增加1
+            // 判断是否空车
+
+            // 在点击事件函数中,就可以使用 ajax的请求结果 res
+
+
+            //** 空车  空车或者是购物车中没有这条数据的话，就要添加两个新的属性
+            if(localStorage.getItem('cart') === null  ){
+              result.num = 1;     // 购买数量信息,第一次默认是1
+              result.buy = true   // 默认当前商品是购买状态
+            //  建立空数组存储数据信息
+              var arr = [];
+              // 将对象写入空数组,作为第一条数据信息
+              // 也就是购物车中的第一条信息
+              arr.push(result);
+              
+            }else{
+
+              //**非空车  
+              // 先默认购物车中没有当前商品  判断质数思路相同
+              let bool = true;
+              // 获取 localStorage 中的信息,解析为对应的数据类型
+              var arr = JSON.parse(localStorage.getItem('cart')) ;
+              console.log(arr);
+              // 循环遍历这个数组
+              arr.forEach(function(item){
+                // 也就是 如果 购车车中的数据,goods_id 数值
+                // 与当前商品 goods_id数值 相同,证明购车中,已经有当前商品了
+                if(item.goods_id === result.goods_id){
+                    item.num++;
+                    // 给变量赋值false,表示购物车中,有当前商品
+                    bool = false;
+                }
+              })
+              
+              // 循环结束
+              // 如果 bool仍然是 true 证明 购物车中没有当前商品,要新增当前商品  添加两个属性
+              if(bool === true){
+                result.buy = true;
+                result.num = 1;
+                arr.push(result); 
+              }
+
+            }
+
+            // 当所有的判断都结束了,会有一个新的 arr
+            // 存储的是 点击 按钮之后,新的数据内容
+            // 将新的数据内容,写入到 localStorage 中 
+            localStorage.setItem('cart' , JSON.stringify(arr) );
+        }
+    })
+</script>
+</body>
+</html>

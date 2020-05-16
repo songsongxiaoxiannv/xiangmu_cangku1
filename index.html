@@ -1,0 +1,2256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- 正确显示网络来源图片 -->
+	<meta name="referrer" content="no-referrer">
+	<title>优品汇项目实战</title>
+	<!-- 字体图标 -->
+	<link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<!-- 引入css js 文件 -->
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+	<!-- 下滑到一定高度时显示的导航 -->
+	<div class="fix_search">
+		<!-- 包含整个宽度的那一层 -->
+		<div class="nav" style="position:relative">
+			<!-- 版心区域 -->
+			<div class="inner">
+				<!-- 左边logo部分 图片可以用h1也可以用背景-->
+				<div class="logo">
+					<!-- logo图片此处用背景图写 -->
+					<!-- 右边两行文字用p标签 -->
+					<p>优品汇</p>
+					<p>汇聚优质商品</p>
+				</div>
+				<!-- 右边 ul li 列表 -->
+				<div class="navl">
+					<ul class="first" id="nav">
+						<li><a href="" id="navsy">首页</a></li>
+						<li><a href="">服装</a> </li>
+						<li><a href="">餐厨</a></li>
+						<li><a href="">电器</a></li>
+						<li><a href="">配件</a></li>
+						<li><a href="">居家</a></li>
+						<li><a href="">洗护</a></li>
+						<li><a href="">婴童</a></li>
+						<li><a href="">杂货</a></li>
+						<li><a href="">饮食</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 下滑到一定高度出现返回顶部的按钮 -->
+	<div class="bt_top" id="return_top">
+		<span title="返回顶部"></span>
+	</div>
+	<!-- 头部 -->
+	<header>
+		<div class="inner">
+			<!-- 左边是小喇叭和四句滑动的句子 -->
+			<div class="left">
+				<ul id="gg">
+					<li><a href="">优品汇线下服务突破1700家</a></li>
+					<li><a href="">优品汇成为中国最大家电零售商</a></li>
+					<li><a href="">优品汇自营家电清洗服务上线</a></li>
+					<li><a href="">优品汇售后退换无忧服务上线</a></li>
+				</ul>
+			</div>
+			<!-- 右边是ul li列表  并且最后一个鼠标滑过的时候会出现一个二维码 和出现的一句话-->
+			<div class="right">
+				<ul>
+					<!-- 第一个是跳转页面 -->
+					<li><a href="JavaScript:;" name="login">请先登录</a>&nbsp;|</li>
+					<li><a href="./pages/res.html">免费注册</a>&nbsp;|</li>
+					<li><a href="./index.html" name="back">退出登录</a>&nbsp;|</li>
+					<li><a href="">会员中心</a>&nbsp;|</li>
+					<li><a href="helpCenter/index.html">帮助中心</a>&nbsp;|</li>
+					<li><a href="">在线客服</a>&nbsp;|</li>
+					<li id="code">
+						<a href=""><img src="images/phone.png" alt="">手机版</a>
+						<!-- 鼠标滑过的时候出现的二维码和一段话 -->
+						<div class="code">
+							<img src="images/show.png" alt="">
+							<p>扫描二维码查看移动版原型效果</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- 导航栏 -->
+	<div class="nav" id="xz_nav" style="position: absolute;">
+		<div class="inner">
+			<div class="logo">
+				<p>优品汇</p>
+				<p>汇聚优质商品</p>
+			</div>
+			<!-- 导航 -->
+			<div class="navl">
+				<ul class="first" id="nav">
+					<!--同一个目录，页面跳转为啥是两个点..-->
+					<li><a href="JavaScript:;">首页</a></li>
+					<li id="navfz" class="chufa">
+						<a href="./pages/list.html?cat_one_id=食品酒水" role="button">服装</a>
+						<div class="clothes">
+							<ul>
+								<li>
+									<!-- <img src="images/pic.png" alt=""> -->
+									<p>毛衫</p>
+								</li>
+								<li>
+									<!-- <img src="images/pic.png" alt=""> -->
+									<p>外衣</p>
+								</li>
+								<li>
+									<!-- <img src="images/pic.png" alt=""> -->
+									<p>卫衣</p>
+								</li>
+								<li>
+									<!-- <img src="images/pic.png" alt=""> -->
+									<p>裤装</p>
+								</li>
+								<li>
+									<!-- <img src="images/pic.png" alt=""> -->
+									<p>家居服</p>
+								</li>
+								<li>
+									<!-- <img src="images/pic.png" alt=""> -->
+									<p>丝袜</p>
+								</li>
+								<li>
+									<!-- <img src="images/pic.png" alt=""> -->
+									<p>T恤</p>
+								</li>
+								<li>
+									<!-- <img src="images/pic.png" alt=""> -->
+									<p>内衣</p>
+								</li>
+								<li>
+									<!-- <img src="images/pic.png" alt=""> -->
+									<p>毛衫</p>
+								</li>
+								<li>
+									<!-- <img src="images/pic.png" alt=""> -->
+									<p>内裤</p>
+								</li>
+								<li>
+									<!-- <img src="images/pic.png" alt=""> -->
+									<p>袜子</p>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="chufa">
+						<a href="./pages/list.html?cat_one_id=童装玩具">餐厨</a>
+						<div class="clothes">
+							<ul>
+								<li>
+									<!-- <img src="images/pic.png" alt=""> -->
+									<p>咖啡具</p>
+								</li>
+								<li>
+									<!-- <img src="images/pic.png" alt=""> -->
+									<p>水具酒具</p>
+								</li>
+								<li>
+									<!-- <img src="images/pic.png" alt=""> -->
+									<p>锅具</p>
+								</li>
+								<li>
+
+									<p>餐具</p>
+								</li>
+								<li>
+
+									<p>功能厨具</p>
+								</li>
+								<li>
+
+									<p>茶具</p>
+								</li>
+								<li>
+
+									<p>清洁保鲜</p>
+								</li>
+								<li>
+
+									<p>刀剪砧板</p>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="chufa">
+						<a href="./pages/list.html?cat_one_id=家装建材">电器</a>
+						<div class="clothes">
+							<ul>
+								<li>
+
+									<p>数码产品</p>
+								</li>
+								<li>
+
+									<p>生活电器</p>
+								</li>
+								<li>
+
+									<p>厨房电器</p>
+								</li>
+								<li>
+
+									<p>个护健康</p>
+								</li>
+								<li>
+
+									<p>影音娱乐</p>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="chufa">
+						<a href="./pages/list.html?cat_one_id=家装建材">配件</a>
+						<div class="clothes">
+							<ul>
+								<li>
+
+									<p>行李箱</p>
+								</li>
+								<li>
+
+									<p>男士包袋</p>
+								</li>
+								<li>
+									<p>女士包袋</p>
+								</li>
+								<li>
+
+									<p>钱包皮件</p>
+								</li>
+								<li>
+
+									<p>男鞋</p>
+								</li>
+								<li>
+
+									<p>女鞋</p>
+								</li>
+								<li>
+
+									<p>拖鞋</p>
+								</li>
+								<li>
+
+									<p>鞋配</p>
+								</li>
+								<li>
+
+									<p>围巾件套</p>
+								</li>
+								<li>
+
+									<p>配饰</p>
+								</li>
+								<li>
+
+									<p>眼镜</p>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="chufa">
+						<a href="./pages/list.html?cat_one_id=奶粉尿裤">居家</a>
+						<div class="clothes">
+							<ul>
+								<li>
+
+									<p>床品件套</p>
+								</li>
+								<li>
+
+									<p>被枕</p>
+								</li>
+								<li>
+
+									<p>家具</p>
+								</li>
+								<li>
+
+									<p>收纳</p>
+								</li>
+								<li>
+
+									<p>布艺软装</p>
+								</li>
+								<li>
+
+									<p>家饰</p>
+								</li>
+								<li>
+
+									<p>宠物</p>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="chufa">
+						<a href="./pages/list.html?cat_one_id=其他">洗护</a>
+						<div class="clothes">
+							<ul>
+								<li>
+
+									<p>毛巾</p>
+								</li>
+								<li>
+
+									<p>面部护理</p>
+								</li>
+								<li>
+
+									<p>身体护理</p>
+								</li>
+								<li>
+
+									<p>香薰</p>
+								</li>
+								<li>
+
+									<p>洗发护发</p>
+								</li>
+								<li>
+
+									<p>美妆</p>
+								</li>
+								<li>
+
+									<p>家庭清洁</p>
+								</li>
+								<li>
+
+									<p>浴室用具</p>
+								</li>
+								<li>
+
+									<p>生理用品</p>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="chufa">
+						<a href="./pages/list.html?cat_one_id=奶粉尿裤">婴童</a>
+						<div class="clothes">
+							<ul>
+								<li>
+
+									<p>儿童服饰</p>
+								</li>
+								<li>
+
+									<p>搭配</p>
+								</li>
+								<li>
+
+									<p>妈咪</p>
+								</li>
+								<li>
+
+									<p>寝居</p>
+								</li>
+								<li>
+
+									<p>玩具</p>
+								</li>
+								<li>
+
+									<p>婴童洗护</p>
+								</li>
+								<li>
+
+									<p>喂养</p>
+								</li>
+								<li>
+
+									<p>婴童出行</p>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="chufa">
+						<a href="./pages/list.html?cat_one_id=其他">杂货</a>
+						<div class="clothes">
+							<ul>
+								<li>
+
+									<p>海外</p>
+								</li>
+								<li>
+
+									<p>旅行用品</p>
+								</li>
+								<li>
+
+									<p>户外</p>
+								</li>
+								<li>
+
+									<p>文具</p>
+								</li>
+								<li>
+
+									<p>礼品卡</p>
+								</li>
+								<li>
+
+									<p>笔记手账</p>
+								</li>
+								<li>
+
+									<p>手写工具</p>
+								</li>
+								<li>
+
+									<p>办公收纳</p>
+								</li>
+								<li>
+
+									<p>数码配件</p>
+								</li>
+								<li>
+
+									<p>摄影配件</p>
+								</li>
+								<li>
+
+									<p>书籍</p>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="chufa">
+						<a href="./pages/list.html?cat_one_id=食品酒水">饮食</a>
+						<div class="clothes">
+							<ul>
+								<li>
+
+									<p>糕点</p>
+								</li>
+								<li>
+
+									<p>小食</p>
+								</li>
+								<li>
+
+									<p>坚果炒货</p>
+								</li>
+								<li>
+
+									<p>裤装</p>
+								</li>
+								<li>
+
+									<p>家居服</p>
+								</li>
+								<li>
+
+									<p>丝袜</p>
+								</li>
+								<li>
+
+									<p>T恤</p>
+								</li>
+								<li>
+
+									<p>内衣</p>
+								</li>
+								<li>
+
+									<p>毛衫</p>
+								</li>
+								<li>
+
+									<p>内裤</p>
+								</li>
+								<li>
+
+									<p>袜子</p>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- 搜索框 -->
+			<div class="search">
+				<input type="text" placeholder="请输入商品关键词">
+				<img src="images/search_n.png" alt="">
+			</div>
+			<!-- 购物车 -->
+			<div class="sp_cart sh" id="sp_cart">
+				<!-- 购物车图片 -->
+				<img src="images/car.png" alt="">
+				<span><a href="JavaScript:;" name="buyCar">我的购物车</a></span>
+				 <span class="num" id="spnum">3</span>
+				<!-- 鼠标滑过的时候出现的三角 -->
+				<div class="sanjiao"></div>
+				<!-- 商品列表  详情和一个总价 -->
+				<div class="goods" id="goods">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 轮播图 部分 -->
+	<div class="content">
+		<div class="inner" style="position: relative;">
+			<!-- 轮播图 -->
+			<div class="lb" id="zdlb">
+				<ul id="lbt">
+					<li><img src="images/carousel_1.png" alt=""><a href=""><span>立即购买</span><i></i></a></li>
+					<li><img src="images/carousel_2.png" alt=""><a href=""><span>立即购买</span><i></i></a></li>
+					<li><img src="images/carousel_1.png" alt=""><a href=""><span>立即购买</span><i></i></a></li>
+					<li><img src="images/carousel_2.png" alt=""><a href=""><span>立即购买</span><i></i></a></li>
+				</ul>
+			</div>
+			<!-- 轮播图小圆点控制 -->
+			<div class="circle">
+				<ul id="circle">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<!-- 轮播图左右控制按钮 -->
+			<div class="active" id="active">
+				<div class="arrow_l" id="activel"></div>
+				<div class="arrow_r" id="active2"></div>
+			</div>
+			<!-- 轮播图上面的样式 -->
+			<div class="fl">
+				<div>
+					<ul class="first">
+						<li>
+							<span>服装</span><a href="">毛衫</a><a href="">毛衫</a>
+							<div class="fl_info on" id="fl">
+								<p><span>分类推荐</span><span>根据您的购买或者浏览器记录推荐</span></p>
+								<div class="tj">
+									<ul>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<span>餐厨</span><a href="">毛衫</a><a href="">毛衫</a>
+							<div class="fl_info on" id="fl">
+								<p><span>分类推荐</span><span>根据您的购买或者浏览器记录推荐</span></p>
+								<div class="tj">
+									<ul>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<span>电器</span><a href="">毛衫</a><a href="">毛衫</a>
+							<div class="fl_info on" id="fl">
+								<p><span>分类推荐</span><span>根据您的购买或者浏览器记录推荐</span></p>
+								<div class="tj">
+									<ul>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<span>配件</span><a href="">毛衫</a><a href="">毛衫</a>
+							<div class="fl_info on" id="fl">
+								<p><span>分类推荐</span><span>根据您的购买或者浏览器记录推荐</span></p>
+								<div class="tj">
+									<ul>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<span>居家</span><a href="">毛衫</a><a href="">毛衫</a>
+							<div class="fl_info on" id="fl">
+								<p><span>分类推荐</span><span>根据您的购买或者浏览器记录推荐</span></p>
+								<div class="tj">
+									<ul>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<span>洗护</span><a href="">毛衫</a><a href="">毛衫</a>
+							<div class="fl_info on" id="fl">
+								<p><span>分类推荐</span><span>根据您的购买或者浏览器记录推荐</span></p>
+								<div class="tj">
+									<ul>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<span>婴童</span><a href="">毛衫</a><a href="">毛衫</a>
+							<div class="fl_info on" id="fl">
+								<p><span>分类推荐</span><span>根据您的购买或者浏览器记录推荐</span></p>
+								<div class="tj">
+									<ul>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+									</ul>
+								</div>
+						</li>
+						<li>
+							<span>杂货</span><a href="">毛衫</a><a href="">毛衫</a>
+							<div class="fl_info on" id="fl">
+								<p><span>分类推荐</span><span>根据您的购买或者浏览器记录推荐</span></p>
+								<div class="tj">
+									<ul>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<span>饮食</span><a href="">毛衫</a><a href="">毛衫</a>
+							<div class="fl_info on" id="fl">
+								<p><span>分类推荐</span><span>根据您的购买或者浏览器记录推荐</span></p>
+								<div class="tj">
+									<ul>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<span>品牌</span><a href="">毛衫</a><a href="">毛衫</a>
+							<div class="fl_info on" id="fl">
+								<p><span>分类推荐</span><span>根据您的购买或者浏览器记录推荐</span></p>
+								<div class="tj">
+									<ul>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+										<li>
+											<div class="pic1"><img src="images/pic.png" alt=""></div>
+											<p>女士超软拉毛运动开衫</p>
+											<p>匠心裁剪，垂感质地</p>
+											<p>￥249</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 品牌制造商 -->
+			<div class="item">
+				<!-- 上 -->
+				<div class="hd">
+					<!-- 左 -->
+					<span>品牌制造商</span><span>工厂直达消费者</span>
+					<!-- 右 -->
+					<span>查看全部</span>
+				</div>
+				<!-- 下 -->
+				<div class="bd">
+					<ul>
+						<li>
+							<p>WMF制造商</p>
+							<p>9.9元起</p>
+							<p class="new">上新</p>
+							<img src="images/iv1.gif" alt="">
+						</li>
+						<li>
+							<p>爱慕制造商</p>
+							<p>35元起</p>
+							<p class="new">上新</p>
+							<img src="images/iv1.gif" alt="">
+						</li>
+						<li>
+							<p>MUJI制造商</p>
+							<p>12.9元起</p>
+							<img src="images/iv1.gif" alt="">
+						</li>
+						<li>
+							<p>内野制造商</p>
+							<p>29元起</p>
+							<img src="images/iv1.gif" alt="">
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 推荐专区 -->
+			<div class="item">
+				<div class="hd">
+					<span>推荐专区</span>
+				</div>
+				<div class="bd">
+					<ul>
+						<li>
+							<p>WMF制造商</p>
+							<p>9.9元起</p>
+							<img src="images/iv2.gif" alt="">
+						</li>
+						<li>
+							<p>爱慕制造商</p>
+							<p>35元起</p>
+							<img src="images/iv2.gif" alt="">
+						</li>
+						<li>
+							<p>MUJI制造商</p>
+							<p>12.9元起</p>
+							<img src="images/iv2.gif" alt="">
+						</li>
+						<li>
+							<p>内野制造商</p>
+							<p>29元起</p>
+							<img src="images/iv2.gif" alt="">
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="content1">
+		<div class="inner">
+			<!-- 秒杀专场部分 -->
+			<div class="box">
+				<div class="hd">
+					<span>秒杀专区</span><span>工厂直达消费者</span>
+					<span>查看全部</span>
+				</div>
+				<div class="bd">
+					<ul class="ms" id="zg">
+						<li>
+							<p>18点场</p>
+							<p>本场结束剩余</p>
+							<P><span id="shi">00</span>:<span id="fen">59</span>:<span id="miao">50</span></P>
+							<p>下一场18：00开始</p>
+							<p><span>查看全部</span></p>
+						</li>
+						<li>
+							<p><img src="images/gd1.jpg" alt=""></p>
+							<p><span>仅剩100件</span></p>
+							<p><span>女士超柔软拉毛运动开衫</span></p>
+							<p>匠心裁剪</p>
+							<p>秒杀价 ￥99</p>
+							<p><span>￥299</span></p>
+							<div class="zg">
+								<ul>
+									<li><a href="#">找相似</a></li>
+									<li><a href="#">不喜欢</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<p><img src="images/gd1.jpg" alt=""></p>
+							<p><span>仅剩100件</span></p>
+							<p><span>女士超柔软拉毛运动开衫</span></p>
+							<p>匠心裁剪</p>
+							<p>秒杀价 ￥99</p>
+							<p><span>￥299</span></p>
+							<!-- 鼠标滑过的时候上面会有灰灰的一层 并且下面会出现的找相似  不喜欢 -->
+							<div class="zg">
+								<ul>
+									<li><a href="#">找相似</a></li>
+									<li><a href="#">不喜欢</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<p><img src="images/gd1.jpg" alt=""></p>
+							<p><span>仅剩100件</span></p>
+							<p><span>女士超柔软拉毛运动开衫</span></p>
+							<p>匠心裁剪</p>
+							<p>秒杀价 ￥99</p>
+							<p><span>￥299</span></p>
+							<div class="zg">
+								<ul>
+									<li><a href="#">找相似</a></li>
+									<li><a href="#">不喜欢</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<p><img src="images/gd1.jpg" alt=""></p>
+							<p><span>仅剩100件</span></p>
+							<p><span>女士超柔软拉毛运动开衫</span></p>
+							<p>匠心裁剪</p>
+							<p>秒杀价 ￥99</p>
+							<p><span>￥299</span></p>
+							<div class="zg">
+								<ul>
+									<li><a href="#">找相似</a></li>
+									<li><a href="#">不喜欢</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 新鲜好物 -->
+			<div class="box">
+				<div class="hd">
+					<span>新鲜好物</span><span>为你寻觅世间好物</span>
+				</div>
+				<div class="bd">
+					<ul class="xx" id="zg">
+						<li>
+							<P><img src="images/gd2.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>新品</P>
+							<div class="zg">
+								<ul>
+									<li><a href="#">找相似</a></li>
+									<li><a href="#">不喜欢</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd2.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>新品</P>
+							<div class="zg">
+								<ul>
+									<li><a href="#">找相似</a></li>
+									<li><a href="#">不喜欢</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd2.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>新品</P>
+							<div class="zg">
+								<ul>
+									<li><a href="#">找相似</a></li>
+									<li><a href="#">不喜欢</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd2.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>新品</P>
+							<div class="zg">
+								<ul>
+									<li><a href="#">找相似</a></li>
+									<li><a href="#">不喜欢</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd2.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>新品</P>
+							<div class="zg">
+								<ul>
+									<li><a href="#">找相似</a></li>
+									<li><a href="#">不喜欢</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 服装 上下两部分-->
+			<div class="box">
+				<div class="hd fz">
+					<span>服装</span>
+					<span class="fz_nav">
+						<a href="">毛衫&nbsp;/</a>
+						<a href="">外衣&nbsp;/</a>
+						<a href="">卫衣&nbsp;/</a>
+						<a href="">裤装&nbsp;/</a>
+						<a href="">衬衫&nbsp;/</a>
+						<a href="">T恤&nbsp;/</a>
+						<a href="">内衣&nbsp;</a>
+					</span>
+					<span>查看全部</span>
+				</div>
+				<div class="bd">
+					<ul class="xx fz">
+						<li>
+							<p>一体积轻薄羽绒服</p>
+							<p>爱人冬天的感觉</p>
+							<P><img src="images/gd6.jpg" alt=""></P>
+							<p>立减200元</p>
+						</li>
+						<li>
+							<P><img src="images/gd6.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd7.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd6.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd7.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="box fzmr">
+				<div class="bd">
+					<ul class="xx fz">
+						<li>
+							<p>一体积轻薄羽绒服</p>
+							<p>爱人冬天的感觉</p>
+							<P class="fc">￥249</P>
+							<p class="all">查看全部</p>
+						</li>
+						<li>
+							<P><img src="images/gd7.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd7.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd7.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd7.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 餐厨 上下两部分-->
+			<div class="box">
+				<div class="hd cc">
+					<span>餐厨</span>
+					<span class="fz_nav">
+						<a href="">咖啡具&nbsp;/</a>
+						<a href="">水具酒具&nbsp;/</a>
+						<a href="">锅具&nbsp;/</a>
+						<a href="">餐具&nbsp;/</a>
+						<a href="">功能厨具&nbsp;/</a>
+						<a href="">茶具&nbsp;/</a>
+						<a href="">清洁保鲜&nbsp;</a>
+					</span>
+					<span>查看全部</span>
+				</div>
+				<div class="bd">
+					<ul class="xx fz">
+						<li>
+							<p>一体积轻薄羽绒服</p>
+							<p>爱人冬天的感觉</p>
+							<P><img src="images/gd3.jpg" alt=""></P>
+							<p>立减200元</p>
+						</li>
+						<li>
+							<P><img src="images/yf.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd3.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd3.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd3.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="box fzmr">
+				<div class="bd">
+					<ul class="xx fz">
+						<li>
+							<p>一体积轻薄羽绒服</p>
+							<p>爱人冬天的感觉</p>
+							<P class="fc">￥249</P>
+							<p class="all">查看全部</p>
+						</li>
+						<li>
+							<P><img src="images/gd6.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd6.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd6.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd6.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 配件 -->
+			<div class="box">
+				<div class="hd cc">
+					<span>配件</span>
+					<span class="fz_nav">
+						<a href="">行李箱&nbsp;/</a>
+						<a href="">男士包袋&nbsp;/</a>
+						<a href="">女士包袋&nbsp;/</a>
+						<a href="">钱包及小皮件&nbsp;/</a>
+						<a href="">男鞋&nbsp;/</a>
+						<a href="">女鞋&nbsp;/</a>
+						<a href="">拖鞋&nbsp;</a></span>
+					<span>查看全部</span>
+				</div>
+				<div class="bd">
+					<ul class="xx fz">
+						<li>
+							<p>一体积轻薄羽绒服</p>
+							<p>爱人冬天的感觉</p>
+							<P><img src="images/gd7.jpg" alt=""></P>
+							<p>立减200元</p>
+						</li>
+						<li>
+							<P><img src="images/gd7.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd7.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd6.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd6.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="box fzmr">
+				<div class="bd">
+					<ul class="xx fz">
+						<li>
+							<p>一体积轻薄羽绒服</p>
+							<p>爱人冬天的感觉</p>
+							<P class="fc">￥249</P>
+							<p class="all">查看全部</p>
+						</li>
+						<li>
+							<P><img src="images/gd6.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd6.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd6.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/gd6.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 居家 上下两部分-->
+			<div class="box">
+				<div class="hd cc">
+					<span>居家</span>
+					<span class="fz_nav">
+						<a href="">床品件套&nbsp;/</a>
+						<a href="">被枕&nbsp;/</a>
+						<a href="">家具&nbsp;/</a>
+						<a href="">收纳&nbsp;/</a>
+						<a href="">布艺软装&nbsp;/</a>
+						<a href="">家饰&nbsp;/</a>
+						<a href="">宠物&nbsp;</a></span>
+					<span>查看全部</span>
+				</div>
+				<div class="bd">
+					<ul class="xx fz">
+						<li>
+							<p>一体积轻薄羽绒服</p>
+							<p>爱人冬天的感觉</p>
+							<P><img src="images/yf.jpg" alt=""></P>
+							<p>立减200元</p>
+						</li>
+						<li>
+							<P><img src="images/yf.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/yf.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/yf.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/yf.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="box fzmr">
+				<div class="bd">
+					<ul class="xx fz">
+						<li>
+							<p>一体积轻薄羽绒服</p>
+							<p>爱人冬天的感觉</p>
+							<P class="fc">￥249</P>
+							<p class="all">查看全部</p>
+						</li>
+						<li>
+							<P><img src="images/yf.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/yf.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/yf.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+						<li>
+							<P><img src="images/yf.jpg" alt=""></P>
+							<P><span>女士超柔软拉毛运动开衫</span></P>
+							<p>匠心裁剪</p>
+							<p>￥249</p>
+							<P>享九折</P>
+							<div class="zg">
+								<p>其实衣服是不错的，见到同事穿才买的，原来买大了一码，要求换了小的，店家也好说时间简史考试结束快捷键是睡觉觉昆山市建设局</p>
+								<p>来自于Windir的评价</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 专题  下面是bd-->
+			<div class="box2">
+				<div class="hd">
+					<div class="lef">专题</div>
+					<div class="right sh">查看全部</div>
+				</div>
+				<div class="bd">
+					<ul>
+						<li>
+							<div class="pic">
+								<img src="images/ct.jpg" alt="">
+							</div>
+							<p>
+								<span><a href="">5个给春天的生活提案</a></span>
+								<span>19.9元起</span>
+							</p>
+							<p><a href="">餐厨起居洗护衣物</a></p>
+							<!-- 它是li下面的第四个孩子是p -->
+							<p>
+								<a href="" title="喜欢">1000</a>
+								<a href="" title="正在观看人数">10000</a>
+								<a href="" title="快来发表想法吧">100</a>
+							</p>
+						</li>
+						<li>
+							<div class="pic">
+								<img src="images/ct1.jpg" alt="">
+							</div>
+							<p>
+								<span><a href="">5个给春天的生活提案</a>
+								</span>
+								<span>19.9元起</span>
+							</p>
+							<p><a href="">餐厨起居洗护衣物</a></p>
+							<p>
+								<a href="">1000</a>
+								<a href="">10000</a>
+								<a href="">100</a>
+							</p>
+						</li>
+						<li>
+							<div class="pic">
+								<img src="images/ct3.jpg" alt="">
+							</div>
+							<p>
+								<span><a href="">5个给春天的生活提案</a>
+								</span>
+								<span>19.9元起</span>
+							</p>
+							<p><a href="">餐厨起居洗护衣物</a></p>
+							<p>
+								<a href="">1000</a>
+								<a href="">10000</a>
+								<a href="">100</a>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 大家都在说 下面是bd1-->
+			<div class="box2">
+				<div class="hd">
+					<div class="lef">大家都在说</div>
+					<div class="right sh">查看全部</div>
+				</div>
+				<!-- 社区滚动 -->
+				<div class="bd1">
+					<!-- css样式在index.css 811    js滚动在index.js-->
+					<ul id="shequ">
+						<li>
+							<div class="pic">
+								<img src="images/say3.jpg" alt="">
+							</div>
+							<p> <a href="">Windir</a> <span>2017-10-09 13:33</span></p>
+							<p><a href="">日本制造收纳盒</a><span>￥99</span></p>
+							<p>从小我就看我奶奶把用完的超市塑料袋整整齐齐叠放好，等以后需要 再拿出来用。现在奶奶已经不再了，塑料袋也要收费了，奶奶不紧不慢，把袋子认真折好的场景，一直在脑海里挥之不去</p>
+						</li>
+						<li>
+							<div class="pic">
+								<img src="images/say4.jpg" alt="">
+							</div>
+							<p> <a href="">Windir</a> <span>2017-10-09 13:33</span></p>
+							<p><a href="">日本制造收纳盒</a><span>￥99</span></p>
+							<p>从小我就看我奶奶把用完的超市塑料袋整整齐齐叠放好，等以后需要再拿出来用。现在奶奶已经不再了，塑料袋也要收费了，奶奶不紧不慢，把袋子认真折好的场景，一直在脑海里挥之不去</p>
+						</li>
+						<li>
+							<div class="pic">
+								<img src="images/say.jpg" alt="">
+							</div>
+							<p> <a href="">Windir</a> <span>2017-10-09 13:33</span></p>
+							<p><a href="">日本制造收纳盒</a><span>￥99</span></p>
+							<p>从小我就看我奶奶把用完的超市塑料袋整整齐齐叠放好，等以后需要再拿出来用。现在奶奶已经不再了，塑料袋也要收费了，奶奶不紧不慢，把袋子认真折好的场景，一直在脑海里挥之不去</p>
+						</li>
+						<li>
+							<div class="pic">
+								<img src="images/say4.jpg" alt="">
+							</div>
+							<p> <a href="">Windir</a> <span>2017-10-09 13:33</span></p>
+							<p><a href="">日本制造收纳盒</a><span>￥99</span></p>
+							<p>从小我就看我奶奶把用完的超市塑料袋整整齐齐叠放好，等以后需要再拿出来用。现在奶奶已经不再了，塑料袋也要收费了，奶奶不紧不慢，把袋子认真折好的场景，一直在脑海里挥之不去</p>
+						</li>
+						<li>
+							<div class="pic">
+								<img src="images/say1.jpg" alt="">
+							</div>
+							<p> <a href="">Windir</a> <span>2017-10-09 13:33</span></p>
+							<p><a href="">日本制造收纳盒</a><span>￥99</span></p>
+							<p>从小我就看我奶奶把用完的超市塑料袋整整齐齐叠放好，等以后需要再拿出来用。现在奶奶已经不再了，塑料袋也要收费了，奶奶不紧不慢，把袋子认真折好的场景，一直在脑海里挥之不去</p>
+						</li>
+						<li>
+							<div class="pic">
+								<img src="images/say4.jpg" alt="">
+							</div>
+							<p> <a href="">Windir</a> <span>2017-10-09 13:33</span></p>
+							<p><a href="">日本制造收纳盒</a><span>￥99</span></p>
+							<p>从小我就看我奶奶把用完的超市塑料袋整整齐齐叠放好，等以后需要再拿出来用。现在奶奶已经不再了，塑料袋也要收费了，奶奶不紧不慢，把袋子认真折好的场景，一直在脑海里挥之不去</p>
+						</li>
+						<li>
+							<div class="pic">
+								<img src="images/say.jpg" alt="">
+							</div>
+							<p> <a href="">Windir</a> <span>2017-10-09 13:33</span></p>
+							<p><a href="">日本制造收纳盒</a><span>￥99</span></p>
+							<p>从小我就看我奶奶把用完的超市塑料袋整整齐齐叠放好，等以后需要再拿出来用。现在奶奶已经不再了，塑料袋也要收费了，奶奶不紧不慢，把袋子认真折好的场景，一直在脑海里挥之不去</p>
+						</li>
+						<li>
+							<div class="pic">
+								<img src="images/say4.jpg" alt="">
+							</div>
+							<p> <a href="">Windir</a> <span>2017-10-09 13:33</span></p>
+							<p><a href="">日本制造收纳盒</a><span>￥99</span></p>
+							<p>从小我就看我奶奶把用完的超市塑料袋整整齐齐叠放好，等以后需要再拿出来用。现在奶奶已经不再了，塑料袋也要收费了，奶奶不紧不慢，把袋子认真折好的场景，一直在脑海里挥之不去</p>
+						</li>
+						<li>
+							<div class="pic">
+								<img src="images/say3.jpg" alt="">
+							</div>
+							<p> <a href="">Windir</a> <span>2017-10-09 13:33</span></p>
+							<p><a href="">日本制造收纳盒</a><span>￥99</span></p>
+							<p>从小我就看我奶奶把用完的超市塑料袋整整齐齐叠放好，等以后需要再拿出来用。现在奶奶已经不再了，塑料袋也要收费了，奶奶不紧不慢，把袋子认真折好的场景，一直在脑海里挥之不去</p>
+						</li>
+						<li>
+							<div class="pic">
+								<img src="images/say3.jpg" alt="">
+							</div>
+							<p> <a href="">Windir</a> <span>2017-10-09 13:33</span></p>
+							<p><a href="">日本制造收纳盒</a><span>￥99</span></p>
+							<p>从小我就看我奶奶把用完的超市塑料袋整整齐齐叠放好，等以后需要 再拿出来用。现在奶奶已经不再了，塑料袋也要收费了，奶奶不紧不慢，把袋子认真折好的场景，一直在脑海里挥之不去</p>
+						</li>
+						<li>
+							<div class="pic">
+								<img src="images/say4.jpg" alt="">
+							</div>
+							<p> <a href="">Windir</a> <span>2017-10-09 13:33</span></p>
+							<p><a href="">日本制造收纳盒</a><span>￥99</span></p>
+							<p>从小我就看我奶奶把用完的超市塑料袋整整齐齐叠放好，等以后需要再拿出来用。现在奶奶已经不再了，塑料袋也要收费了，奶奶不紧不慢，把袋子认真折好的场景，一直在脑海里挥之不去</p>
+						</li>
+						<li>
+							<div class="pic">
+								<img src="images/say.jpg" alt="">
+							</div>
+							<p> <a href="">Windir</a> <span>2017-10-09 13:33</span></p>
+							<p><a href="">日本制造收纳盒</a><span>￥99</span></p>
+							<p>从小我就看我奶奶把用完的超市塑料袋整整齐齐叠放好，等以后需要再拿出来用。现在奶奶已经不再了，塑料袋也要收费了，奶奶不紧不慢，把袋子认真折好的场景，一直在脑海里挥之不去</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 底部关于我们 -->
+	<div class="about">
+		<div class="inner">
+			<ul>
+				<li>
+					<p>客户服务</p>
+					<div class="about_l">
+						<p>在线客服</p>
+					</div>
+					<div class="about_r">
+						<p>问题反馈</p>
+					</div>
+				</li>
+				<li>
+					<p>关注我们</p>
+					<div class="about_l">
+						<p>公众号</p>
+					</div>
+					<div class="about_r">
+						<p>微博</p>
+					</div>
+				</li>
+				<li>
+					<p>下载APP</p>
+					<div class="about_l">
+						<p><img class="xz" src="images/show.png" alt=""></p>
+
+					</div>
+					<div class="about_r">
+						<p>扫描二维码查看</p>
+						<p>移动版原型效果</p>
+						<p><span>下载页面</span></p>
+					</div>
+				</li>
+				<li>
+					<p>服务热线</p>
+					<p>400-00000-000</p>
+					<p>周一至周日&nbsp;&nbsp;8:00-18:00</p>
+					<p>仅收市话费</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 底部 -->
+	<footer>
+		<div class="inner">
+			<div class="hder">
+				<ul>
+					<li>
+						30天无忧退换货
+					</li>
+					<li>
+						<img src="images/u1030.png" alt=""><span>满88包邮</span>
+					</li>
+					<li>
+						<img src="images/u1033.png" alt="">
+						<span>优品汇品质保证</span>
+					</li>
+				</ul>
+			</div>
+			<div class="bd_nav">
+				<ul>
+					<li><a href="">关于我们&nbsp;&nbsp;</a>|</li>
+					<li><a href="">帮助中心&nbsp;&nbsp;</a>|</li>
+					<li><a href="">售后服务&nbsp;&nbsp;</a>|</li>
+					<li><a href="">配送与验收&nbsp;&nbsp;</a>|</li>
+					<li><a href="">商务合作&nbsp;&nbsp;</a>|</li>
+					<li><a href="">企业采购&nbsp;&nbsp;</a>|</li>
+					<li><a href="">开放平台&nbsp;&nbsp;</a>|</li>
+					<li><a href="">搜索推荐&nbsp;&nbsp;</a>|</li>
+					<li><a href="">友情链接&nbsp;&nbsp;</a></li>
+				</ul>
+			</div>
+			<div class="aitical">CopyRight @ 优品汇 2015 - 2017 </div>
+		</div>
+	</footer>
+	<!-- 固定的右下方的两个 -->
+	<div class="fixed_xz">
+		<p></p>
+		<p>在线客服</p>
+	</div>
+	<div class="fixed_kf">
+		<p></p>
+		<p>在线客服</p>
+	</div>
+	<script src="./js/jquery-3.3.0.min.js"></script>
+	<script src="./js/common.js"></script>
+	<script src="./js/index.js"></script>
+	<script src="./js/cookie.js"></script>
+	<script>
+		// 通过js设定登录跳转效果,添加地址来源
+		$('[name="login"]').click(function () {
+			window.location.href = `./pages/login.html?${window.location.href}`;
+		})
+		// 退出登录,就是删除 cookie中的login
+		$('[name="back"]').click(function () {
+			setCookies('login', '随便', -1);
+			window.alert('您已经退出登录了');
+		})
+
+		// 购物车,.有cookie中的login,可以跳转,没有login,先登录
+		$('[name="buyCar"]').click(function () {
+			// 判断是否有login
+			// 获取cookie对象
+			const cookieObj = getCookieObj(document.cookie);
+
+			// 如果对象中没有login,undefined，弹出提示框
+			if (cookieObj['login'] === undefined) {
+				let bool = window.confirm('您还没有登录,点击确定,跳转登录页面');
+				// 如果点击的结果是true,证明点击的是确定,跳转至登录页面
+				if (bool === true) {
+					window.location.href = `./pages/login.html?${window.location.href}`;
+				}
+				// 如果 有 login 的登录状态码,证明已经登录
+				// 直接跳转至购物车页面
+			} else if (cookieObj['login'] === '1') {
+				window.location.href = './pages/cart.html';
+			}
+		})
+
+
+		 // 1,获取 localStorage 中的数据信息  就是存储的数据信息
+		 const cateArr = JSON.parse(localStorage.getItem('cart'));
+		console.log(cateArr);
+		 setPage(cateArr);
+		 function setPage(array) {
+			// 定义变量来存储数据,定义在函数中
+		 	let NUM = 0;
+		 	let TYPE = 0;
+			let PAY = 0;
+		 	// 2,根据数据内容来生成页面
+		 	let str = '';
+		 	array.forEach(function (item) {
+				if (item.buy === true) {
+					TYPE++;  
+		 			NUM += item.num;  // 数量是 += 累加
+		 			PAY += item.num * item.goods_price;   // 钱数是 数量*单价
+		 		}
+	 		str += `<div class="item">
+						<div class="le">
+							<img src="${item.goods_small_logo}" alt=""></div>
+		 				<div class="midd">
+							<p>${item.goods_name}</p>
+		 				</div>
+						<div class="ri" id="select">
+		 					<span>${item.goods_price}</span>
+							<span>${TYPE}件</span>
+		 					<span title="删除" class="dele" name="dele"></span>
+		 				</div>
+					</div>`;
+		 		// 写在循环里面
+		 		// if (item.buy === true) {
+				// 	TYPE++;  
+		 		// 	NUM += item.num;  // 数量是 += 累加
+		 		// 	PAY += item.num * item.goods_price;   // 钱数是 数量*单价
+		 		// }
+			})
+			str += `<div class="prace">
+						<p>共<span id="sum">${NUM}</span>件商品</p>
+		 				<p class="all_pri" id="allprice">${ parseInt(PAY * 100) / 100}</p>
+		 				<button id="shop_car" name="buyCar">去购物车清算</button>
+		 			</div>`;
+		 	$('.goods').html(str);
+			// 通过事件委托,给动态生成的内容,添加点击事件
+
+		 	const oDiv = document.querySelector('.goods');
+
+		 	oDiv.addEventListener('click', function (e) {
+		 		if (e.target.getAttribute('name') === 'dele') {
+					// 获取 goods_id 的属性
+		          let goods_id = e.target.getAttribute('goods_id');
+					cateArr.forEach(function (item, key) {
+		 				// 如果当前item的goods_id 与 标签中存储的goods_id相同
+		 				if (item.goods_id === goods_id) {
+							// 购买数量--
+							item.num--;
+		 				}
+		 			})
+				}
+		 	})
+
+		 }
+	</script>
+</body>
+
+</html>
